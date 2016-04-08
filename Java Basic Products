@@ -1,0 +1,91 @@
+public class Products 
+{
+
+	protected int code;
+	protected String name;
+	protected String year;
+	protected String manufacturer;
+	protected float price;
+	
+	/*in order not to call the default constructor we make one, because we have variables that 
+	need to be intialized by classes that are lower*/
+	
+	public Products(int code, String name, String year, String manufacturer, float price)
+	{
+		this.code = code;
+		this.name = name;
+		this.year = year;
+		this.manufacturer = manufacturer;
+		this.price = price;
+	}
+	
+	public int getCode()
+	{
+		return code;
+	}
+	
+	public void setCode(int code)
+	{
+		this.code = code;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public void setName (String name )
+	{
+		this.name = name;
+	}
+	
+	public String getYear()
+	{
+		return year;
+	}
+	
+	public void setYear (String year)
+	{
+		this.year = year;
+	}
+	
+	public String getManufacturer()
+	{
+		return manufacturer;
+	}
+	
+	public void setManufacturer (String manufacturer)
+	{
+		this.manufacturer = manufacturer;
+	}
+	
+	public float getPrice()
+	{
+		return price;
+	}
+	
+	public void setPrice (float price)
+	{
+		this.price = price;
+	}
+	
+	
+	
+	//we put abstract method of discount and we force lower classes to implement it
+	//public abstract void setDiscount(float discount); // no need because it's final
+	public abstract float getDiscount();
+	
+	@Override
+	public int hashCode() {
+		return (int)code + name.hashCode() + year.hashCode() + manufacturer.hashCode() + (float)price;
+	}
+
+	@Override
+	public String toString() {
+		
+		return "Κωδικος: "+ code +"Όνομα μοντέλου: " + name + " Έτος μοντέλου: " + year + 
+			   "\nΚατασκευαστής: " + manufacturer + " Τιμή: " + price;
+	}
+
+	
+}
