@@ -1,0 +1,56 @@
+public class Camera extends ImageSound 
+{
+	private String megapixel,opticalzoom,digitalzoom,screensize;
+	
+	public Camera(int code, String name, String year, String manufacturer, float price, String type, String megapixel,String opticalzoom,String digitalzoom,String screensize)
+	{
+		super(code,name,year,manufacturer,price,type);
+		this.megapixel = megapixel;
+		this.opticalzoom = opticalzoom;
+		this.digitalzoom = digitalzoom;
+		this.screensize = screensize;
+	}
+	
+	// All getters
+	public String getMegapixel()
+	{
+		return this.megapixel;
+	}
+	
+	public String getOpticalzoom()
+	{
+		return this.opticalzoom;
+	}
+	
+	public String getDigitalzoom()
+	{
+		return this.digitalzoom;
+	}
+	
+	public String getScreensize()
+	{
+		return this.screensize;
+	}
+	
+	// All setters
+	public void setMegapixel(String newmegapixel)
+	{
+		this.megapixel = newmegapixel;
+	}
+	
+	public void setOpticalzoom(String newopticalzoom)
+	{
+		this.opticalzoom = newopticalzoom;
+	}
+	
+	public void setDigitalzoom(String newdigitalzoom)
+	{
+		this.digitalzoom = newdigitalzoom;
+	}
+	
+	public void setScreensize(String newscreensize)
+	{
+		this.screensize = newscreensize;
+	}
+	
+}
