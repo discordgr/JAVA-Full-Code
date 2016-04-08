@@ -67,4 +67,8 @@ public class Gaming extends Products
 		this.capacity = newcapacity;
 	}
 	
+	public String toString() 
+	{
+		return "\nType: " + this.type + "\nProccessor: " + this.proccessor + "\nGraphichs: " + this.graphics + "\nSound: " + this.sound + "\nCapacity: " + this.capacity;
+	}
 }
