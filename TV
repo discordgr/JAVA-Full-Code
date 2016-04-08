@@ -1,0 +1,38 @@
+public class TV extends PSG
+{
+	private String port;
+	private int dimension;
+	
+	//Constructor
+	public TV(String productcode,String modelname,String creator,String type,String resolution,int year,double price,String port,int dimension)
+	{
+		super(productcode,modelname,creator,type,year,price,resolution);
+		this.port = port;
+		this.dimension = dimension;
+	}
+	
+	//port setter
+	public void setPort(String port)
+	{
+		this.port = port;
+	}
+	
+	//dimension setter
+	public void setDimension(int dimension)
+	{
+		this.dimension = dimension;
+	}
+	
+	//port getter
+	public String getPort()
+	{
+		return this.port;
+	}
+	
+	//dimension getter
+	public int getDimension()
+	{
+		return this.dimension;
+	}
+	
+}
