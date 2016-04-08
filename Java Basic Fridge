@@ -1,0 +1,48 @@
+ 
+public class Friges extends HouseholdAppliances
+{
+	protected String FrigeType;
+	protected float FrigeSpaceUp;
+	protected float FrigeSpaceDown;
+	
+	public Friges(int code, String name, String year, String manufacturer, float price, String energysave, String FrigeType, float FrigeSpaceUp, float FrigeSpaceDown)
+	{
+		super(code, name, year, manufacturer, price, energysave );
+		this.FrigeSpaceUp = FrigeSpaceUp;
+		this.FrigeSpaceDown = FrigeSpaceDown;
+	}	
+		
+		public String getFrigeType()
+		{
+			return FrigeType;
+		}
+		
+		public void setFrigeSpaceUp(String FrigeType)
+		{
+			this.FrigeType = FrigeType;
+		}
+		
+		public float getFrigeTypep()
+		{
+			return FrigeType;
+		}
+		
+		public void setFrigeSpaceUp(float FrigeSpaceUp)
+		{
+			this.FrigeSpaceUp = FrigeSpaceUp;
+		}
+		
+		public float getFrigeSpaceDown()
+		{
+			return FrigeSpaceDown;
+		}
+		
+		public void setFrigeSpace(float FrigeSpaceDown)
+		{
+			this.FrigeSpaceDown = FrigeSpaceDown;
+		}
+
+
+
+
+}
