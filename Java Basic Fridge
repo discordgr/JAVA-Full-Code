@@ -1,4 +1,5 @@
  
+ 
 public class Friges extends HouseholdAppliances
 {
 	protected String FrigeType;
@@ -41,7 +42,11 @@ public class Friges extends HouseholdAppliances
 		{
 			this.FrigeSpaceDown = FrigeSpaceDown;
 		}
-
+		
+		public String toString()
+		{
+			return "\nFridge refrigeration Space:  " + this.FrigeSpaceUp + "\nFridge Main Space: " + this.FrigeSpaceDown;
+		}
 
 
 
