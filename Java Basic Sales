@@ -1,0 +1,79 @@
+public class Sales 
+{
+	private String scode,productsale,fullname,phone,date;
+	private float totalcost; 
+	
+	public Sales( String scode, String productsale, String fullname, String phone,String date,float totalcost )
+	{
+		this.scode = scode;
+		this.productsale = productsale;
+		this.fullname = fullname;
+		this.phone = phone;
+		this.date = date;
+		this.totalcost = totalcost;
+	}
+	
+	// All getters
+	
+	public String getScode()
+	{
+		return this.scode;
+	}
+	
+	public String getProductSale()
+	{
+		return this.productsale;
+	}
+	
+	public String getFullName()
+	{
+		return this.fullname;
+	}
+	
+	public String getPhone()
+	{
+		return this.phone;
+	}
+	
+	public String getDate()
+	{
+		return this.date;
+	}
+	
+	public float getTotalCost()
+	{
+		return this.totalcost;
+	}
+	
+	// All setters
+	
+	public void setScode(String newscode)
+	{
+		this.scode = newscode;
+	}
+	
+	public void setProductSale(String newproductsale)
+	{
+		this.productsale = newproductsale;
+	}
+	
+	public void setFullName(String newfullname)
+	{
+		this.fullname = newfullname;
+	}
+	
+	public void setPhone(String newphone)
+	{
+		this.phone = newphone;
+	}
+	
+	public void setDate(String newdate)
+	{
+		this.date = newdate;
+	}
+	
+	public void setTotalCost(float newtotalcost)
+	{
+		this.totalcost = newtotalcost;
+	}
+}
