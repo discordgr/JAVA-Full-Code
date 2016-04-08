@@ -8,6 +8,7 @@ public abstract class HouseholdAppliances extends Products
 	public HouseholdAppliances(int code, String name, String year, String manufacturer, float price, String energysave ) 
 	{
 		super(code, name, year, manufacturer, price);
+		this.discount = discount;
 		this.energysave = energysave;
 	}
 	
@@ -25,5 +26,10 @@ public abstract class HouseholdAppliances extends Products
 	public void setEnergySave(String energysave)
 	{
 		this.energysave = energysave;
+	}
+	
+	public String toString()
+	{
+		return "\nEnergyclass: "+energysave;
 	}
 }
