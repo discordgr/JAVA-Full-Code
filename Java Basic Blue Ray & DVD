@@ -1,0 +1,33 @@
+public class BRDVD extends ImageSound 
+{
+	private String resolution,format;
+
+	public BRDVD(int code, String name, String year, String manufacturer, float price, String type , String resolution, String format ) {
+		
+		super(code,name,year,manufacturer,price,type);
+		this.resolution=resolution;
+		this.format=format;
+	}
+	
+	// All getters
+	public String getResolution()
+	{
+		return resolution;
+	}
+
+	public String getFormat()
+	{
+		return format;
+	}
+    
+	// All setters 
+	public void setResolution(String newresolution)
+	{
+		this.resolution = newresolution;
+	}
+	
+	public void setFormat(String newformat)
+	{
+		this.format = newformat;
+	}
+}
