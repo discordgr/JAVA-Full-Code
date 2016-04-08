@@ -1,0 +1,101 @@
+public class PSG
+{
+	private String productcode,modelname,creator,type,resolution;
+	private int year;
+	private double price;
+	
+	//Constructor  Camera, Gaming Consoles
+	public PSG(String productcode,String modelname,String creator,String type,int year,double price)
+	{
+		this.productcode = productcode;
+		this.modelname = modelname;
+		this.creator = creator;
+		this.type = type;
+		this.year = year;
+		this.price = price;
+	}
+	
+	//Constructor TV,BR & DVD
+	public PSG(String productcode,String modelname,String creator,String type,String resolution,int year,double price)
+	{
+		this.productcode = productcode;
+		this.modelname = modelname;
+		this.creator = creator;
+		this.type = type;
+		this.year = year;
+		this.price = price;
+		this.resolution = resolution;
+	}
+	
+	//All setters
+	public void setProductcode(String productcode)
+	{
+		this.productcode = productcode;
+	}
+	
+	public void setModelName(String modelname)
+	{
+		this.modelname = modelname;
+	}
+	
+	public void setCreator(String creator)
+	{
+		this.creator = creator;
+	}
+	
+	public void setType(String type)
+	{
+		this.type = type;
+	}
+	
+	public void setYear(int year)
+	{
+		this.year = year;
+	}
+	
+	public void setPrice(double price)
+	{
+		this.price = price;
+	}
+	
+	public void setResolution(String resolution)
+	{
+		this.resolution = resolution;
+	}
+	
+	//All getters
+	public String getProductcode()
+	{
+		return this.productcode;
+	}
+	
+	public String getModelName()
+	{
+		return this.modelname;
+	}
+	
+	public String getCreator()
+	{
+		return this.creator;
+	}
+	
+	public String getType()
+	{
+		return this.type;
+	}
+	
+	public int getYear()
+	{
+		return this.year;
+	}
+	
+	public double getPrice()
+	{
+		return this.price;
+	}
+	
+	public String getResolution()
+	{
+		return this.resolution;
+	}
+}
