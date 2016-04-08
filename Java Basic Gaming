@@ -1,0 +1,70 @@
+public class Gaming extends Products
+{
+	private String type,proccessor,graphics,sound,capacity;
+	
+	
+	
+	public Gaming ( int code, String name, String year, String manufacturer, float price, String type, String proccessor, String graphics, String sound, String capacity)
+	{
+		super(code,name,year,manufacturer,price);
+		this.type = type;
+		this.proccessor = proccessor;
+		this.graphics = graphics;
+		this.sound = sound;
+		this.capacity = capacity;
+	}
+	
+	// All getters
+	public String getType()
+	{
+		return this.type;
+	}
+	
+		public String getProccessor()
+	{
+		return this.proccessor;
+	}
+	
+		public String getGraphics()
+	{
+		return this.graphics;
+	}
+	
+		public String getSound()
+	{
+		return this.sound;
+	}
+	
+		public String getCapacity()
+	{
+		return this.capacity;
+	}
+	
+	
+	// All setters
+	public void setType(String newtype)
+	{
+		this.type =  newtype;
+	}
+	
+	public void setProccessor(String newproccessor)
+	{
+		this.proccessor = newproccessor;
+	}
+	
+	public void setGraphics(String newgraphics)
+	{
+		this.graphics = newgraphics;
+	}
+	
+	public void setSound(String newsound)
+	{
+		this.sound = newsound;
+	}
+	
+	public void setCapacity(String newcapacity)
+	{
+		this.capacity = newcapacity;
+	}
+	
+}
