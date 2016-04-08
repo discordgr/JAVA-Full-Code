@@ -53,4 +53,7 @@ public class Camera extends ImageSound
 		this.screensize = newscreensize;
 	}
 	
-}
+	public String toString()
+	{
+		return "\nMegapixel: " + this.megapixel + "\nOpticalzoom: " + this.opticalzoom + "\nDigitalzoom: " + this.digitalzoom + "\nScreensize: " + this.screensize;
+	}
