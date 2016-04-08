@@ -1,70 +1,35 @@
-public class Gaming extends Products
+public class Washingmachine extends HouseholdAppliances
 {
-	private String type,proccessor,graphics,sound,capacity;
+	private int bends;
+	private String washingspace;
 	
-	
-	
-	public Gaming ( int code, String name, String year, String manufacturer, float price, String type, String proccessor, String graphics, String sound, String capacity)
+	public Washingmachine(int code, String name, String year, String manufacturer, float price, String energysave, String washingspace, int bends )
 	{
-		super(code,name,year,manufacturer,price);
-		this.type = type;
-		this.proccessor = proccessor;
-		this.graphics = graphics;
-		this.sound = sound;
-		this.capacity = capacity;
+		super(code,name,year,manufacturer,price,energysave);
+		this.washingspace = washingspace;
+		this.bends = bends;
 	}
 	
 	// All getters
-	public String getType()
+	public String getWashingSpace()
 	{
-		return this.type;
+		return this.washingspace;
 	}
 	
-		public String getProccessor()
+	public int getBends()
 	{
-		return this.proccessor;
+		return this.bends;
 	}
-	
-		public String getGraphics()
-	{
-		return this.graphics;
-	}
-	
-		public String getSound()
-	{
-		return this.sound;
-	}
-	
-		public String getCapacity()
-	{
-		return this.capacity;
-	}
-	
 	
 	// All setters
-	public void setType(String newtype)
+	public void setWashingSpace(String newwashingspace)
 	{
-		this.type =  newtype;
+		this.washingspace = newwashingspace;
 	}
 	
-	public void setProccessor(String newproccessor)
+	public void setBends(int newbends)
 	{
-		this.proccessor = newproccessor;
+		this.bends = newbends;
 	}
-	
-	public void setGraphics(String newgraphics)
-	{
-		this.graphics = newgraphics;
-	}
-	
-	public void setSound(String newsound)
-	{
-		this.sound = newsound;
-	}
-	
-	public void setCapacity(String newcapacity)
-	{
-		this.capacity = newcapacity;
-	}
-	
+
 }
