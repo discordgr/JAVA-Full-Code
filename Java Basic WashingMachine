@@ -31,5 +31,12 @@ public class Washingmachine extends HouseholdAppliances
 	{
 		this.bends = newbends;
 	}
+	
+	public String toString()
+	{
+		return "\nWashingspace: "+ this.washingspace + "\nBends: "+ this.bends ;
+    }
+
+
 
 }
