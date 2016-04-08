@@ -1,0 +1,29 @@
+
+public abstract class HouseholdAppliances extends Products 
+{
+	//final for all HouseholdAppliances
+	protected final float discount = 0.2F;
+	protected String energysave;
+	
+	public HouseholdAppliances(int code, String name, String year, String manufacturer, float price, String energysave ) 
+	{
+		super(code, name, year, manufacturer, price);
+		this.energysave = energysave;
+	}
+	
+	//we may have an abstract class but in order not to implement in lower classes we can call getDiscount from this class
+	public float getDiscount() 
+	{
+		return discount;
+	}
+	
+	public String getEnergySave()
+	{
+		return energysave;
+	}
+	
+	public void setEnergySave(String energysave)
+	{
+		this.energysave = energysave;
+	}
+}
