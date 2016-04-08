@@ -30,4 +30,9 @@ public class BRDVD extends ImageSound
 	{
 		this.format = newformat;
 	}
+	
+	public String toString()
+	{
+		return "\nresolution: "+this.resolution+"\nformat: "+this.format;
+	}
 }
