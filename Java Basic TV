@@ -34,4 +34,9 @@ public class TV extends ImageSound {
 	public void setPort(String port){
 		this.port = port;
 	}
+	
+	public String toString()
+	{
+		return "\nDimention: "+ dimension +"\nresolution: "+ resolution +"\nport: "+ port;
+	}
 }	
