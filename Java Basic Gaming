@@ -1,10 +1,11 @@
 public class Gaming extends Products
 {
-	private String type,proccessor,graphics,sound,capacity;
+	private String proccessor,graphics,sound,capacity,type;
 	
 	
 	
-	public Gaming ( int code, String name, String year, String manufacturer, float price, String type, String proccessor, String graphics, String sound, String capacity)
+	
+	public Gaming ( int code, String name, String year, String manufacturer, double price, String type, String proccessor, String graphics, String sound, String capacity)
 	{
 		super(code,name,year,manufacturer,price);
 		this.type = type;
@@ -69,6 +70,8 @@ public class Gaming extends Products
 	
 	public String toString() 
 	{
-		return "\nType: " + this.type + "\nProccessor: " + this.proccessor + "\nGraphichs: " + this.graphics + "\nSound: " + this.sound + "\nCapacity: " + this.capacity;
+		return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
+			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nType: " + this.type + "\nProccessor: " + this.proccessor + "\nGraphichs: " + this.graphics + "\nSound: " + this.sound + 
+			   "\nCapacity: " + this.capacity + "\n";
 	}
 }
