@@ -1,11 +1,10 @@
-
 public  class HouseholdAppliances extends Products 
 {
 	//final for all HouseholdAppliances
 	protected final float discount = 0.2F;
 	protected String energysave;
 	
-	public HouseholdAppliances(int code, String name, String year, String manufacturer, float price, String energysave ) 
+	public HouseholdAppliances(int code, String name, String year, String manufacturer, double price, String energysave ) 
 	{
 		super(code, name, year, manufacturer, price);
 		this.energysave = energysave;
