@@ -1,0 +1,288 @@
+import java.util.*;
+public class test
+{
+	public static void main(String args[]) 
+	{
+		Scanner in = new Scanner ( System.in );
+		Scanner out = new Scanner ( System.in );
+		
+		
+		
+		ArrayList <Products> products = new ArrayList <Products>();
+		ArrayList <Order> orders = new ArrayList <Order>();
+		ArrayList <Sales> sales = new ArrayList <Sales>();
+		
+		String answer,answer1,answer2,answer3;
+		boolean done = false;
+		boolean flag;
+		int j;
+		
+		products.add(new TV(1,"TV1","1993","Samsung",59.99,"LCD","1920x1080","1080p HDD","HDMI"));
+		products.add(new TV(2,"TV2","1995","Toshiba",69.99,"LED","1920x1080","1080p HDD","VGA"));
+		products.add(new BRDVD(01,"DVD1","2009","Sony",109.99,"DVD","1920x1080","DVD-RW"));
+		products.add(new BRDVD(02,"BR1","2010","Sony",129.99,"Blue Ray","1920x1080","BD-R"));
+		products.add(new Camera(001,"CAMERA1","2015","Nikon",250.50,"DSLR","15","x1000","x25000","8 inches"));
+		products.add(new Camera(002,"CAMERA2","2016","Nikon",150.50,"Compact","15","x5000","x20000","4 inches"));
+		products.add(new Gaming(0001,"CONSOLE1","2014","Sony",299.99,"PS4","Intel Core i5","VGA RADEON R9","Realtek HD Audio","500 GB"));
+		products.add(new Gaming(0002,"CONSOLE2","2010","Sony",149.99,"PS3","Intel Core i5","VGA RADEON R7","Realtek HD Audio","250 GB"));
+		products.add(new Friges(00001,"FRIDGE1","2015","AEG",199.99,"500W","One Door",250,600));
+		products.add(new Friges(00002,"FRIDGE2","2016","AEG",239.99,"600W","Two Door",250,800));
+		products.add(new Washingmachine(000001,"MACHINE1","2007","AEG",419.99,"700W","300 Lb",300));
+		products.add(new Washingmachine(000002,"MACHINE2","2008","AEG",479.99,"700W","350 Lb",350));
+		while ( ! done )	
+		{
+   	 			System.out.println("\n1. Available Devices");
+   	 			System.out.println("2. All Orders");
+   	 			System.out.println("3. All Sales");
+   	 			System.out.println("0. Exit");
+   	 			answer = in.nextLine();
+   	 			if (answer.equals("1"))
+				{
+					System.out.println("Please choose one of the following categories: \n1.Image & Sound\n2.Gaming Consoles\n3.Household Appliances");
+					answer1 = in.nextLine();
+					if (answer1.equals("1"))  // Image & Sound 
+					{
+						System.out.println("Please define the type of device you want: \n1.TV\n2.Blue Ray & DVD\n3.Camera");
+						answer2 = in.nextLine();
+						if (answer2.equals("1"))         // TV 
+						{
+							System.out.println("Please type the name of the device you're interested: ");                                      
+							for( Products i : products )
+							{
+								if ( i instanceof TV )
+								{
+									System.out.println(i.getName());
+								}
+							}
+							answer3 = in.nextLine();
+							flag = false;
+							while ( flag == false )
+							{
+								for ( Products i : products )
+								{
+									if ( i.getName().equals(answer3) )
+									{
+										System.out.println(i);
+										flag = true;
+									}
+								}
+								if ( flag == false )
+								{
+									System.out.println("No such device");
+									System.out.println("Please give me the name of the device you're interested: ");
+									for( Products i : products )
+									{
+										if ( i instanceof TV )
+										{
+											System.out.println(i.getName());
+										}
+									}
+									answer3 = in.nextLine();
+								}
+							}
+							
+						}                                                  // TV 
+						
+						else if ( answer2.equals("2"))                    // BR & DVD 
+						{
+							System.out.println("Please type the name of the device you're interested: ");
+							for( Products i : products )
+							{
+								if ( i instanceof BRDVD )
+								{
+									System.out.println(i.getName());
+								}
+							}
+							answer3 = in.nextLine();
+							flag = false;
+							while ( flag == false )
+							{
+								
+								for ( Products i : products )
+								{
+									if ( i.getName().equals(answer3) )
+									{
+										System.out.println(i);
+										flag = true;
+									}
+								}
+								if ( flag == false )
+								{
+									System.out.println("No such device");
+									System.out.println("Please give me the name of the device you're interested: ");
+									for( Products i : products )
+									{
+										if ( i instanceof BRDVD )
+										{
+											System.out.println(i.getName());
+										}
+									}
+									answer3 = in.nextLine();
+								}
+							}
+						}												// BR & DVD
+						
+						else 											// Camera
+						{
+							System.out.println("Please type the name of the device you're interested: ");
+							for( Products i : products )
+							{
+								if ( i instanceof Camera )
+								{
+									System.out.println(i.getName());
+								}
+							}
+							answer3 = in.nextLine();
+							flag = false;
+							while ( flag == false )
+							{
+								for ( Products i : products )
+								{
+									if ( i.getName().equals(answer3) )
+									{
+										System.out.println(i);
+										flag = true;
+									}
+								}
+								if ( flag == false )
+								{
+									System.out.println("No such device");
+									System.out.println("Please give me the name of the device you're interested: ");
+									for( Products i : products )
+									{
+										if ( i instanceof Camera )
+										{
+											System.out.println(i.getName());
+										}
+									}
+									answer3 = in.nextLine();
+								}
+							}
+							
+						}														// Camera
+						
+					}                                  					// Image & Sound
+					
+					
+					else if (answer1.equals("2"))					// Gaming
+					{
+						System.out.println("Please type the name of the device you're interested: ");                                      
+							for( Products i : products )
+							{
+								if ( i instanceof Gaming )
+								{
+									System.out.println(i.getName());
+								}
+							}
+						answer3 = in.nextLine();
+						flag = false;
+							while ( flag == false )
+							{
+								for ( Products i : products )
+								{
+									if ( i.getName().equals(answer3) )
+									{
+										System.out.println(i);
+										flag = true;
+									}
+								}
+								if ( flag == false )
+								{
+									System.out.println("No such device");
+									System.out.println("Please give me the name of the device you're interested: ");
+									for( Products i : products )
+									{
+										if ( i instanceof Gaming )
+										{
+											System.out.println(i.getName());
+										}
+									}
+									answer3 = in.nextLine();
+								}
+							}
+					}												// GAMING
+					
+					else															// House Hold appliances
+					{
+						System.out.println("Please define the type of device you want: \n1.Fridge\n2.Washing Machine");
+						answer2 = in.nextLine();
+						if (answer2.equals("1"))
+						{
+							System.out.println("Please type the name of the device you're interested: ");                                      
+							for( Products i : products )
+							{
+								if ( i instanceof Friges )
+								{
+									System.out.println(i.getName());
+								}
+							}
+							answer3 = in.nextLine();
+							flag = false;
+							while ( flag == false )
+							{
+								for ( Products i : products )
+								{
+									if ( i.getName().equals(answer3) )
+									{
+										System.out.println(i);
+										flag = true;
+									}
+								}
+								if ( flag == false )
+								{
+									System.out.println("No such device");
+									System.out.println("Please give me the name of the device you're interested: ");
+									for( Products i : products )
+									{
+										if ( i instanceof Friges )
+										{
+											System.out.println(i.getName());
+										}
+									}
+									answer3 = in.nextLine();
+								}
+							}
+						}											// Fridge
+						else 									// WASHING MACHINE
+						{
+							System.out.println("Please type the name of the device you're interested: ");                                      
+							for( Products i : products )
+							{
+								if ( i instanceof Washingmachine )
+								{
+									System.out.println(i.getName());
+								}
+							}
+							answer3 = in.nextLine();
+							flag = false;
+							while ( flag == false )
+							{
+								for ( Products i : products )
+								{
+									if ( i.getName().equals(answer3) )
+									{
+										System.out.println(i);
+										flag = true;
+									}
+								}
+								if ( flag == false )
+								{
+									System.out.println("No such device");
+									System.out.println("Please give me the name of the device you're interested: ");
+									for( Products i : products )
+									{
+										if ( i instanceof Washingmachine )
+										{
+											System.out.println(i.getName());
+										}
+									}
+									answer3 = in.nextLine();
+								}
+							}
+						}								// WASHING MACHINE
+					}          // House hold Appliances
+					
+				}
+		}
+	}
+}
