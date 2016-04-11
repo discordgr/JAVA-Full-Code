@@ -1,6 +1,7 @@
 
 
-public class ImageSound extends Products {
+public class ImageSound extends Products 
+{
 	//final for all ImageSound
 	
 	protected final float discount = 0.25F;
@@ -19,7 +20,7 @@ public class ImageSound extends Products {
 	public ImageSound (int code, String name, String year, String manufacturer, float price ,String type, String resolution)
 	{
 		super(code, name, year, manufacturer, price);
-		this.type = type
+		this.type = type;
 		this.resolution=resolution;
 		this.flag = true;
 	}
@@ -61,3 +62,4 @@ public class ImageSound extends Products {
 			return "\nType: " + this.type;
 		}
 	}
+}
