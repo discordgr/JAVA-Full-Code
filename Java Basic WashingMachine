@@ -3,7 +3,7 @@ public class Washingmachine extends HouseholdAppliances
 	private int bends;
 	private String washingspace;
 	
-	public Washingmachine(int code, String name, String year, String manufacturer, float price, String energysave, String washingspace, int bends )
+	public Washingmachine(int code, String name, String year, String manufacturer, double price, String energysave, String washingspace, int bends )
 	{
 		super(code,name,year,manufacturer,price,energysave);
 		this.washingspace = washingspace;
@@ -34,9 +34,7 @@ public class Washingmachine extends HouseholdAppliances
 	
 	public String toString()
 	{
-		return "\nWashingspace: "+ this.washingspace + "\nBends: "+ this.bends ;
+		return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
+			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nEnergyclass: "+energysave + "\nWashingspace: "+ this.washingspace + "\nBends: "+ this.bends + "\n";
     }
-
-
-
 }
