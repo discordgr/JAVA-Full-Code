@@ -57,3 +57,5 @@ public class Camera extends ImageSound
 	{
 		return "\nMegapixel: " + this.megapixel + "\nOpticalzoom: " + this.opticalzoom + "\nDigitalzoom: " + this.digitalzoom + "\nScreensize: " + this.screensize;
 	}
+	
+}
