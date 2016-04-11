@@ -1,5 +1,3 @@
- 
- 
 public class Friges extends HouseholdAppliances
 {
 	protected String FrigeType;
@@ -13,24 +11,15 @@ public class Friges extends HouseholdAppliances
 		this.FrigeSpaceDown = FrigeSpaceDown;
 	}	
 		
+		// All getters
 		public String getFrigeType()
 		{
 			return FrigeType;
 		}
 		
-		public void setFrigeSpaceUp(String FrigeType)
+		public float getFrigeSpaceUp()
 		{
-			this.FrigeType = FrigeType;
-		}
-		
-		public float getFrigeTypep()
-		{
-			return FrigeType;
-		}
-		
-		public void setFrigeSpaceUp(float FrigeSpaceUp)
-		{
-			this.FrigeSpaceUp = FrigeSpaceUp;
+			return FrigeSpaceUp;
 		}
 		
 		public float getFrigeSpaceDown()
@@ -38,7 +27,18 @@ public class Friges extends HouseholdAppliances
 			return FrigeSpaceDown;
 		}
 		
-		public void setFrigeSpace(float FrigeSpaceDown)
+		public void setFrigeType(String FrigeType)
+		{
+			this.FrigeType = FrigeType;
+		}
+		
+		public void setFrigeSpaceUp(float FrigeSpaceUp)
+		{
+			this.FrigeSpaceUp = FrigeSpaceUp;
+		}
+		
+	
+		public void setFrigeSpaceDown(float FrigeSpaceDown)
 		{
 			this.FrigeSpaceDown = FrigeSpaceDown;
 		}
