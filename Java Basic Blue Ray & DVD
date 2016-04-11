@@ -1,8 +1,9 @@
 public class BRDVD extends ImageSound 
 {
-	private String resolution,format;
+	private String resolution;
+	private String format;
 
-	public BRDVD(int code, String name, String year, String manufacturer, float price, String type , String resolution, String format ) {
+	public BRDVD(int code, String name, String year, String manufacturer, double price,  String type , String resolution,  String format ) {
 		
 		super(code,name,year,manufacturer,price,type);
 		this.resolution=resolution;
@@ -33,6 +34,7 @@ public class BRDVD extends ImageSound
 	
 	public String toString()
 	{
-		return "\nresolution: "+this.resolution+"\nformat: "+this.format;
+		return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
+			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nType: " + this.type + "\nResolution: "+this.resolution+"\nformat: "+this.format+ "\n";
 	}
 }
