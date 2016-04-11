@@ -1,5 +1,3 @@
-
-
 public class ImageSound extends Products 
 {
 	//final for all ImageSound
@@ -8,16 +6,16 @@ public class ImageSound extends Products
 	
 	protected String type;
 	protected String resolution;
-	private boolean flag;
+	private boolean flag = false;
 	
-	public ImageSound(int code, String name, String year, String manufacturer, float price, String type  ) 
+	public ImageSound(int code, String name, String year, String manufacturer, double price, String type  ) 
 	{
 		super(code, name, year, manufacturer, price);
 		this.type = type;
-		this.flag = false;
+		
 	}
 	
-	public ImageSound (int code, String name, String year, String manufacturer, float price ,String type, String resolution)
+	public ImageSound (int code, String name, String year, String manufacturer, double price ,String type, String resolution)
 	{
 		super(code, name, year, manufacturer, price);
 		this.type = type;
