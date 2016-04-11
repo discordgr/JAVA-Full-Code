@@ -2,7 +2,8 @@ public class Camera extends ImageSound
 {
 	private String megapixel,opticalzoom,digitalzoom,screensize;
 	
-	public Camera(int code, String name, String year, String manufacturer, float price, String type, String megapixel,String opticalzoom,String digitalzoom,String screensize)
+	
+	public Camera(int code, String name, String year, String manufacturer, double price, String type, String megapixel,String opticalzoom,String digitalzoom,String screensize)
 	{
 		super(code,name,year,manufacturer,price,type);
 		this.megapixel = megapixel;
@@ -55,7 +56,9 @@ public class Camera extends ImageSound
 	
 	public String toString()
 	{
-		return "\nMegapixel: " + this.megapixel + "\nOpticalzoom: " + this.opticalzoom + "\nDigitalzoom: " + this.digitalzoom + "\nScreensize: " + this.screensize;
+		return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
+			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nType: " + this.type + "\nMegapixel: " + this.megapixel + "\nOpticalzoom: " + this.opticalzoom + "\nDigitalzoom: " + this.digitalzoom + 
+			   "\nScreensize: " + this.screensize+ "\n";
 	}
 	
 }
