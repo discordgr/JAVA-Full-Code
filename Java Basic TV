@@ -1,8 +1,9 @@
 public class TV extends ImageSound {
     
-	private String dimension,resolution,port;
+	private String dimension,resolution;
+	private String port;
 	
-	public TV(int code, String name, String year, String manufacturer, float price, String type, String dimension,String resolution,String port){
+	public TV(int code, String name, String year, String manufacturer, double price,  String type, String dimension,String resolution, String port){
 		super(code,name,year,manufacturer,price,type);
 	    this.dimension=dimension;
 		this.resolution=resolution;
@@ -37,6 +38,7 @@ public class TV extends ImageSound {
 	
 	public String toString()
 	{
-		return "\nDimention: "+ dimension +"\nresolution: "+ resolution +"\nport: "+ port;
+		return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
+			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nType: " + this.type + "\nResolution :" + this.resolution + "\nDimention: "+ dimension +"\nresolution: "+ resolution +"\nport: "+ port+ "\n";
 	}
 }	
