@@ -5,12 +5,12 @@ public class Products
 	protected String name;
 	protected String year;
 	protected String manufacturer;
-	protected float price;
+	protected double price;
 	
 	/*in order not to call the default constructor we make one, because we have variables that 
 	need to be intialized by classes that are lower*/
 	
-	public Products(int code, String name, String year, String manufacturer, float price){
+	public Products(int code, String name, String year, String manufacturer, double price){
 		this.code = code;
 		this.name = name;
 		this.year = year;
@@ -50,18 +50,13 @@ public class Products
 		this.manufacturer = manufacturer;
 	}
 	
-	public float getPrice(){
+	public double getPrice(){
 		return price;
 	}
 	
-	public void setPrice (float price){
+	public void setPrice (double price){
 		this.price = price;
 	}
-	
-	
-	
-	//we put abstract method of discount and we force lower classes to implement it
-	//public abstract void setDiscount(float discount); // no need because it's final
 	
 	
 	@Override
