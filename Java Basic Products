@@ -62,18 +62,13 @@ public class Products
 	
 	//we put abstract method of discount and we force lower classes to implement it
 	//public abstract void setDiscount(float discount); // no need because it's final
-	public abstract float getDiscount();
 	
-	@Override
-	public int hashCode() {
-		return (int)code + name.hashCode() + year.hashCode() + manufacturer.hashCode() + (float)price;
-	}
-
+	
 	@Override
 	public String toString() {
 		
 		return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
-			   "\Manufacturer: " + manufacturer + "\nPrice: " + price;
+			   "\nManufacturer: " + manufacturer + "\nPrice: " + price;
 	}
 
 	
