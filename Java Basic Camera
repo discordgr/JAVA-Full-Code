@@ -1,16 +1,28 @@
-public class Camera extends ImageSound 
+public class Camera extends Products
 {
-	private String megapixel,opticalzoom,digitalzoom,screensize;
 	
+	private String megapixel,opticalzoom,digitalzoom,screensize;
+	private static String type;
 	
 	public Camera(int code, String name, String year, String manufacturer, double price, String type, String megapixel,String opticalzoom,String digitalzoom,String screensize)
 	{
-		super(code,name,year,manufacturer,price,type);
+		super(code,name,year,manufacturer,price);
 		this.megapixel = megapixel;
 		this.opticalzoom = opticalzoom;
 		this.digitalzoom = digitalzoom;
 		this.screensize = screensize;
+		this.type=type;
 	}
+	public String getType()
+	{
+		return this.type;
+	}
+	
+	public void setType(String type)
+	{
+		this.type = type;
+	}
+	
 	
 	// All getters
 	public String getMegapixel()
