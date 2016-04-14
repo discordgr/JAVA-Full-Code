@@ -1,13 +1,25 @@
-public class TV extends ImageSound {
-    
+public class TV extends Products{
+   
+    private static String type;
 	private String dimension,resolution;
 	private String port;
 	
 	public TV(int code, String name, String year, String manufacturer, double price,  String type, String dimension,String resolution, String port){
-		super(code,name,year,manufacturer,price,type);
+		super(code,name,year,manufacturer,price);
 	    this.dimension=dimension;
 		this.resolution=resolution;
 		this.port=port;
+		this.type = type;
+	}
+	
+	public String getType()
+	{
+		return this.type;
+	}
+	
+	public void setType(String type)
+	{
+		this.type = type;
 	}
 	
 	// All getters
