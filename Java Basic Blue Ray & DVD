@@ -1,14 +1,22 @@
-public class BRDVD extends ImageSound 
-{
+public class BRDVD extends Products 
+{ 	
+    private static boolean type;
+  
 	private String resolution;
 	private String format;
 
-	public BRDVD(int code, String name, String year, String manufacturer, double price,  String type , String resolution,  String format ) {
+	public BRDVD(int code, String name, String year, String manufacturer, double price, String resolution,  String format, boolean type ) {
 		
-		super(code,name,year,manufacturer,price,type);
+		super(code,name,year,manufacturer,price);
 		this.resolution=resolution;
 		this.format=format;
+	    this.type=type;
 	}
+	
+	public String getType()
+	{
+		return type ? "DVD" : "BLUE_RAY";
+	} 
 	
 	// All getters
 	public String getResolution()
@@ -35,6 +43,6 @@ public class BRDVD extends ImageSound
 	public String toString()
 	{
 		return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
-			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nType: " + this.type + "\nResolution: "+this.resolution+"\nformat: "+this.format+ "\n";
+			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nType: " + (type ? "BLUE_RAY" : "DVD") + "\nResolution: "+this.resolution+"\nformat: "+this.format+ "\n";
 	}
 }
