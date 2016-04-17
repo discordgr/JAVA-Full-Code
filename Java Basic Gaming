@@ -1,11 +1,10 @@
 public class Gaming extends Products
 {
-	private String proccessor,graphics,sound,capacity,type;
+	private String proccessor,graphics,sound,capacity;
+	private int type;
+	protected final double discount = 0.10;
 	
-	
-	
-	
-	public Gaming ( int code, String name, String year, String manufacturer, double price, String type, String proccessor, String graphics, String sound, String capacity)
+	public Gaming ( int code, String name, String year, String manufacturer, double price, int type, String proccessor, String graphics, String sound, String capacity)
 	{
 		super(code,name,year,manufacturer,price);
 		this.type = type;
@@ -15,37 +14,54 @@ public class Gaming extends Products
 		this.capacity = capacity;
 	}
 	
-	// All getters
 	public String getType()
 	{
-		return this.type;
+		if(type==1)
+		{	
+			return "PS4";
+		}
+		else if (type==2)
+		{
+			return "PS3";
+		}
+		else if (type==3)
+		{
+			return "Xbox";
+		}
+		else
+		{
+			return "Wii";
+		}
 	}
 	
-		public String getProccessor()
+	public void setType(int type)
+	{
+		this.type = type;
+	}
+	
+	public String getProccessor()
 	{
 		return this.proccessor;
 	}
 	
-		public String getGraphics()
+	public String getGraphics()
 	{
 		return this.graphics;
 	}
 	
-		public String getSound()
+	public String getSound()
 	{
 		return this.sound;
 	}
 	
-		public String getCapacity()
+	public String getCapacity()
 	{
 		return this.capacity;
 	}
 	
-	
-	// All setters
-	public void setType(String newtype)
+	public double getDiscount()
 	{
-		this.type =  newtype;
+		return discount;
 	}
 	
 	public void setProccessor(String newproccessor)
@@ -70,8 +86,25 @@ public class Gaming extends Products
 	
 	public String toString() 
 	{
+		String onoma;
+		if(type==1)
+		{	
+			onoma = "PS4";
+		}
+		else if (type==2)
+		{
+			onoma = "PS3";
+		}
+		else if (type==3)
+		{
+			onoma = "Xbox";
+		}
+		else
+		{
+			onoma = "Wii";
+		}
 		return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
-			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nType: " + this.type + "\nProccessor: " + this.proccessor + "\nGraphichs: " + this.graphics + "\nSound: " + this.sound + 
+			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nType: " + onoma + "\nProccessor: " + this.proccessor + "\nGraphichs: " + this.graphics + "\nSound: " + this.sound + 
 			   "\nCapacity: " + this.capacity + "\n";
 	}
 }
