@@ -1,7 +1,7 @@
 public  class HouseholdAppliances extends Products 
 {
-	//final for all HouseholdAppliances
-	protected final float discount = 0.2F;
+	
+	protected final double discount = 0.4;
 	protected String energysave;
 	
 	public HouseholdAppliances(int code, String name, String year, String manufacturer, double price, String energysave ) 
@@ -10,8 +10,7 @@ public  class HouseholdAppliances extends Products
 		this.energysave = energysave;
 	}
 	
-	//we may have an abstract class but in order not to implement in lower classes we can call getDiscount from this class
-	public float getDiscount() 
+	public double getDiscount() 
 	{
 		return discount;
 	}
