@@ -6,9 +6,7 @@ public class Products
 	protected String year;
 	protected String manufacturer;
 	protected double price;
-	
-	/*in order not to call the default constructor we make one, because we have variables that 
-	need to be intialized by classes that are lower*/
+	protected final double discount = 0;
 	
 	public Products(int code, String name, String year, String manufacturer, double price){
 		this.code = code;
@@ -58,6 +56,10 @@ public class Products
 		this.price = price;
 	}
 	
+	public double getDiscount()
+	{
+		return discount;
+	}
 	
 	@Override
 	public String toString() {
