@@ -1,9 +1,10 @@
 public class Sales 
 {
-	private String scode,productsale,fullname,phone,date;
-	private float totalcost; 
 	
-	public Sales( String scode, String productsale, String fullname, String phone,String date,float totalcost )
+	private String scode, productsale,fullname,phone,date, totalcost;
+	
+	
+	public Sales( String scode, String productsale, String fullname, String phone,String date,String totalcost )
 	{
 		this.scode = scode;
 		this.productsale = productsale;
@@ -40,7 +41,7 @@ public class Sales
 		return this.date;
 	}
 	
-	public float getTotalCost()
+	public String getTotalCost()
 	{
 		return this.totalcost;
 	}
@@ -72,8 +73,13 @@ public class Sales
 		this.date = newdate;
 	}
 	
-	public void setTotalCost(float newtotalcost)
+	public void setTotalCost(String newtotalcost)
 	{
 		this.totalcost = newtotalcost;
+	}
+	
+	public String toString()
+	{
+		return "Sales code: " + this.scode + "\nProduct to be saled: " + this.productsale + "\nFullname: " + this.fullname + "\nPhone number: " + this.phone + "\nDate: " + this.date + "\nTotalcost: " +this.totalcost + "\n";
 	}
 }
