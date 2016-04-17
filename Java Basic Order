@@ -4,7 +4,8 @@ public class Order
 	private String ocode, productorder , fullname , phone , orderdate , arrivaldate ,cost;
 	private boolean flag;
 	
-	public Order(String ocode,String productorder,String fullname,String phone,String orderdate,String arrivaldate,String cost ,boolean flag){
+	public Order(String ocode,String productorder,String fullname,String phone,String orderdate,String arrivaldate,String cost ,boolean flag)
+	{
 		this.ocode=ocode;
 		this.productorder=productorder;
 		this.fullname=fullname;
@@ -17,69 +18,99 @@ public class Order
 	}
 	
 	// All getters 
-	public String getOcode(){
+	public String getOcode()
+	{
 		return ocode;
 	}
 	
-	public String getProductorder(){
+	public String getProductorder()
+	{
 		return productorder;
 	}
 	
-	public String getFullname(){
+	public String getFullname()
+	{
 		return fullname;
 	}
 	
-	public String getPhone(){
+	public String getPhone()
+	{
 		return phone;
 	}
 	
-	public String getOrderdate(){
+	public String getOrderdate()
+	{
 		return orderdate;
 	}
 	
-	public String getArrivaldate(){
+	public String getArrivaldate()
+	{
 		return arrivaldate;
 	}
 	
-	public String getCost(){
+	public String getCost()
+	{
 		return cost;
 	}
 	
 	// All setters
-	public void setOcode(String ocode){
+	public void setOcode(String ocode)
+	{
 		this.ocode = ocode;
 	}
 	
-	public void setProductor(String productorder){
+	public void setProductor(String productorder)
+	{
 		this.productorder = productorder;
 	}
 	
-	public void setFullname(String fullname){
+	public void setFullname(String fullname)
+	{
 		this.fullname = fullname;
 	}
 	
-	public void setPhone(String phone){
+	public void setPhone(String phone)
+	{
 		this.phone = phone;
 	}
 	
-	public void setOrderdate(String orderdate){
+	public void setOrderdate(String orderdate)
+	{
 		this.orderdate = orderdate;
 	}
 	
-	public void setArrivaldate(String arrivaldate){
+	public void setArrivaldate(String arrivaldate)
+	{
 		this.arrivaldate = arrivaldate;
 	}
 	
-	public void setCost(String cost){
+	public void setCost(String cost)
+	{
 		this.cost = cost;
 	}
 	
 	// Get, Set Flag
-	public void setFlag(boolean flag){
+	public void setFlag(boolean flag)
+	{
 		this.flag = flag;
 	}
 	
-	public boolean getFlag(){
+	public boolean getFlag()
+	{
 		return flag;
+	}
+	
+	public String toString()
+	{
+		if ( flag )
+		{
+			return "Order Code: " + this.ocode + "\nProduct to be ordered: " + this.productorder + "\nFullname: " + this.fullname + "\nPhone: " + this.phone + "\nOrderdate: " + this.orderdate + "\nArrivaldate: " + this.arrivaldate
+			+ "\nCost: " + this.cost + "\nStatus: Done!\n";
+		}
+		else
+		{
+			return "Order Code: " + this.ocode + "\nProduct to be ordered: " + this.productorder + "\nFullname: " + this.fullname + "\nPhone: " + this.phone + "\nOrderdate: " + this.orderdate + "\nArrivaldate: " + this.arrivaldate
+			+ "\nCost: " + this.cost + "\nStatus: Waiting\n";
+		}
 	}
 }
