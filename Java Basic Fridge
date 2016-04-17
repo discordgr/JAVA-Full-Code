@@ -1,54 +1,74 @@
 public class Friges extends HouseholdAppliances
 {
-	private String FrigeType;
+	private int type;
 	private float FrigeSpaceUp;
 	private float FrigeSpaceDown;
 	
-	public Friges(int code, String name, String year, String manufacturer, double price, String energysave,  String FrigeType, float FrigeSpaceUp, float FrigeSpaceDown)
+	public Friges(int code, String name, String year, String manufacturer, double price, String energysave,  int type, float FrigeSpaceUp, float FrigeSpaceDown)
 	{
 		super(code, name, year, manufacturer, price, energysave );
 		this.FrigeSpaceUp = FrigeSpaceUp;
 		this.FrigeSpaceDown = FrigeSpaceDown;
+		this.type=type;
 	}	
 		
-		// All getters
-		public String getFrigeType()
-		{
-			return FrigeType;
+	public String getType()
+	{
+		if(type==1)
+		{	
+			return "One door";
 		}
-		
-		public float getFrigeSpaceUp()
+		else if (type==2)
 		{
-			return FrigeSpaceUp;
+			return "Two door";
 		}
-		
-		public float getFrigeSpaceDown()
+		else
 		{
-			return FrigeSpaceDown;
+			return "closet";
 		}
-		
-		public void setFrigeType(String FrigeType)
-		{
-			this.FrigeType = FrigeType;
-		}
-		
-		public void setFrigeSpaceUp(float FrigeSpaceUp)
-		{
-			this.FrigeSpaceUp = FrigeSpaceUp;
-		}
-		
+	}
 	
-		public void setFrigeSpaceDown(float FrigeSpaceDown)
-		{
-			this.FrigeSpaceDown = FrigeSpaceDown;
-		}
+	public void setType(int type)
+	{
+		this.type = type;
+	}
 		
-		public String toString()
-		{
-			return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
-			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nEnergyclass: " + energysave + "\nFridge refrigeration Space:  " + this.FrigeSpaceUp + "\nFridge Main Space: " + this.FrigeSpaceDown + "\n";
+	public float getFrigeSpaceUp()
+	{
+		return FrigeSpaceUp;
+	}
+	
+	public float getFrigeSpaceDown()
+	{
+		return FrigeSpaceDown;
+	}
+	
+	public void setFrigeSpaceUp(float FrigeSpaceUp)
+	{
+		this.FrigeSpaceUp = FrigeSpaceUp;
+	}
+	
+	public void setFrigeSpaceDown(float FrigeSpaceDown)
+	{
+		this.FrigeSpaceDown = FrigeSpaceDown;
+	}
+	
+	public String toString()
+	{
+		String onoma;
+		if(type==1)
+		{	
+			onoma = "One door";
 		}
-
-
-
+		else if (type==2)
+		{
+			onoma = "Two door";
+		}
+		else
+		{
+			onoma = "closet";
+		}
+		return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
+		   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nEnergyclass: " + energysave + "\nFridge refrigeration Space:  " + "\nFrigeType" + onoma + this.FrigeSpaceUp + "\nFridge Main Space: " + this.FrigeSpaceDown + "\n";
+	}
 }
