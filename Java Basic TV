@@ -1,23 +1,33 @@
-public class TV extends Products{
+public class TV extends ImageSound{
    
-    private static String type;
-	private String dimension,resolution;
+    private int type;
+	private String dimension;
 	private String port;
 	
-	public TV(int code, String name, String year, String manufacturer, double price,  String type, String dimension,String resolution, String port){
-		super(code,name,year,manufacturer,price);
+	public TV(int code, String name, String year, String manufacturer, double price,String resolution,  int type, String dimension, String port){
+		super(code,name,year,manufacturer,price,resolution);
 	    this.dimension=dimension;
-		this.resolution=resolution;
 		this.port=port;
 		this.type = type;
 	}
 	
 	public String getType()
 	{
-		return this.type;
+		if(type==1)
+		{	
+			return "LCD";
+		}
+		else if (type==2)
+		{
+			return "LED";
+		}
+		else
+		{
+			return "Plasma";
+		}
 	}
 	
-	public void setType(String type)
+	public void setType(int type)
 	{
 		this.type = type;
 	}
@@ -27,8 +37,9 @@ public class TV extends Products{
 		return dimension;		
 	}
 	
-	public String getResolution(){
-		return resolution;
+	public double getDiscount() 
+	{
+		return discount;
 	}
 	
 	public String getPort(){
@@ -36,9 +47,7 @@ public class TV extends Products{
 	}
 	
 	// All setters 
-	public void setResolution(String resolution){
-		this.resolution = resolution;
-	}
+	
 	
 	public void setDimension(String dimension){
 		this.dimension = dimension;
@@ -49,8 +58,21 @@ public class TV extends Products{
 	}
 	
 	public String toString()
-	{
+	{   
+		String onoma;
+		if(type==1)
+		{	
+			onoma = "LCD";
+		}
+		else if (type==2)
+		{
+			onoma = "LED";
+		}
+		else
+		{
+			onoma = "Plasma";
+		}
 		return "Code: "+ code +"\nModelName: " + name + "\nYear: " + year + 
-			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nType: " + this.type + "\nResolution :" + this.resolution + "\nDimention: "+ dimension +"\nresolution: "+ resolution +"\nport: "+ port+ "\n";
+			   "\nManufacturer: " + manufacturer + "\nPrice: " + price + "\nType: " + onoma + "\nResolution :" + resolution + "\nDimention: "+ dimension + "\nport: "+ port+ "\n";
 	}
 }	
