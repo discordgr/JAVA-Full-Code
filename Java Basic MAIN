@@ -5,7 +5,7 @@
 
 
 import java.util.*;
-public class main
+public class mainApp
 {
 	static ArrayList <Integer> availability = new ArrayList <Integer>(6);
 	static ArrayList <Products> products = new ArrayList <Products>();
