@@ -6,17 +6,17 @@ public class main
 	static ArrayList <Order> orders = new ArrayList <Order>();
 	static ArrayList <Sales> sales = new ArrayList <Sales>();
 	static Scanner in = new Scanner ( System.in );
-	
+	static int productsSaleCode;                // Sales code
+	static int productsOrderCode;				// Order code
 	
 	public static void main(String args[]) 
 	{
 		Products i;	
-		
-		
 		String answer,answer1,answer2,temp;
 		boolean done = false;
 		boolean flag,orderflag;
 		int j;
+		boolean flagcategory = true;
 		
 		products.add(new TV(1,"TV1","1993","Samsung",59.99,"1920x1080",1,"1080p HDD","HDMI"));
 		products.add(new TV(2,"TV2","1995","Toshiba",69.99,"1920x1080",2,"1080p HDD","VGA"));
@@ -37,155 +37,77 @@ public class main
 		products.add(new Washingmachine(2,"MACHINE2","2008","AEG",479.99,"700W","350 Lb",350));
 		availability.add(2);
 		
-		int productsSaleCode = 0;                // Sales code
-		int productsOrderCode = 0;				// Order code
 		while ( ! done )	
 		{
-			
-   	 		System.out.println("\n1. Available Devices");
-   	 		System.out.println("2. All Orders");
-   	 		System.out.println("3. All Sales");
-   	 		System.out.println("0. Exit");
-   	 		answer = in.nextLine();
-   	 		if (answer.equals("1"))
-			{
-				System.out.println("Please choose one of the following categories: \n1.Image & Sound\n2.Gaming Consoles\n3.Household Appliances");
-				answer1 = in.nextLine();
-				if (answer1.equals("1"))  // Image & Sound 
+			do{	
+				printStartMenu();
+				answer = in.nextLine();	
+			}while(!answer.equals("1") && !answer.equals("2") && !answer.equals("3") && !answer.equals("0"));	
+   	 		
+			if (answer.equals("1"))
+			{       
+				do{
+					System.out.println("Please choose one of the following categories: \n1.Image & Sound\n2.Gaming Consoles\n3.Household Appliances");
+					answer1 = in.nextLine();
+				}while(!answer1.equals("1") && !answer1.equals("2") && !answer1.equals("3"));
+				if (answer1.equals("1")) // Image & Sound 
 				{
-					System.out.println("Please define the type of device you want: \n1.TV\n2.Blue Ray & DVD\n3.Camera");
-					answer2 = in.nextLine();
+					do{
+						System.out.println("Please define the type of device you want only: \n1.TV\n2.Blue Ray & DVD\n3.Camera");
+						answer2 = in.nextLine();
+					}while(!answer2.equals("1") && !answer2.equals("2") && !answer2.equals("3"));
 					if (answer2.equals("1"))         // TV 
 					{
 						i = method(TV.class);
 						j = Number(i);
-						if( j > 0 )
-						{
-							productsSaleCode++;
-							createSales(productsSaleCode,i);
-						}
-						else if ( j == 0 )
-						{
-							productsOrderCode++;
-							createOrder(productsOrderCode,i);						
-						}
-						else if ( j == -1 )
-						{
-							System.out.println("Redirecting you back to starting menu");
-						}
-						
-					}                                        // TV          
+						Select(j, i);
 					
+					}                                        // TV          
+				
 					else if ( answer2.equals("2"))			// BR & DVD 
 					{
 						i = method(BRDVD.class);
 						j = Number(i);
-						if ( j > 0 )
-						{
-							productsSaleCode++;
-							createSales(productsSaleCode,i);
-						}
-						else if ( j == 0 )
-						{
-							productsOrderCode++;
-							createOrder(productsOrderCode,i);
-						}
-						else if ( j == -1 )
-						{
-							System.out.println("Redirecting you back to starting menu");
-						}
+						Select(j, i);
 					}										// BR & DVD	
-					
+				
 					else 								   // Camera
 					{
 						i = method(Camera.class);
 						j = Number(i);
-						if( j > 0 )
-						{
-							productsSaleCode++;
-							createSales(productsSaleCode,i);
-						}
-						else if ( j == 0 )
-						{
-							productsOrderCode++;
-							createOrder(productsOrderCode,i);						
-						}
-						else if ( j == -1 )
-						{
-							System.out.println("Redirecting you back to starting menu");
-						}
-						
+						Select(j, i);
+					
 					}								// Camera				
 				}                                  					// Image & Sound
-				
-				
 				else if (answer1.equals("2"))					// Gaming
 				{
 					i = method(Gaming.class);
 					j = Number(i);
-						if( j > 0 )
-						{
-							productsSaleCode++;
-							createSales(productsSaleCode,i);
-						}
-						else if ( j == 0 )
-						{
-							productsOrderCode++;
-							createOrder(productsOrderCode,i);						
-						}
-						else if ( j == -1 )
-						{
-							System.out.println("Redirecting you back to starting menu");
-						}
+					Select(j, i);
 				}												// GAMING
-				
-				else															// House Hold appliances
+				else if (answer1.equals("3"))														// House Hold appliances
 				{
-					System.out.println("Please define the type of device you want: \n1.Fridge\n2.Washing Machine");
-					answer2 = in.nextLine();
+					do{
+						System.out.println("Please define the type of device you want only: \n1.Fridge\n2.Washing Machine");
+						answer2 = in.nextLine();
+					}while(!answer2.equals("1") && !answer2.equals("2"));
 					if (answer2.equals("1"))			// Fridge
 					{
 						i = method(Friges.class);
 						j = Number(i);
-						if( j > 0 )
-						{
-							productsSaleCode++;
-							createSales(productsSaleCode,i);
-						}
-						else if ( j == 0 )
-						{
-							productsOrderCode++;
-							createOrder(productsOrderCode,i);						
-						}
-						else if ( j == -1 )
-						{
-							System.out.println("Redirecting you back to starting menu");
-						}
+						Select(j, i);
 					}										
-					
 					else 							   // WASHING MACHINE
 					{   
-					   i = method(Washingmachine.class);
-					   j = Number(i);
-					   if( j > 0 )
-						{
-							productsSaleCode++;
-							createSales(productsSaleCode,i);
-						}
-						else if ( j == 0 )
-						{
-							productsOrderCode++;
-							createOrder(productsOrderCode,i);						
-						}
-						else if ( j == -1 )
-						{
-							System.out.println("Redirecting you back to starting menu");
-						}
-					   
+						i = method(Washingmachine.class);
+						j = Number(i);
+						Select(j, i);
+				   
 					}														// Washing machine
-				}         													 // House hold Appliances
-				
+				}          // House hold Appliances
+							
 			}
+			
 			else if ( answer.equals("2") ) 
 			{
 				System.out.println(orders+"\n");
@@ -206,8 +128,11 @@ public class main
 						if ( answer1.equals(k.getOcode()) )
 						{
 							System.out.println(k);
-							System.out.println("Has the order arrived at it's destination?\n1.Yes\n2.No");
-							answer2 = in.nextLine();
+							do
+							{
+								System.out.println("Has the order arrived at it's destination?\n1.Yes\n2.No");
+								answer2 = in.nextLine();
+							}while(!answer2.equals("1") && !answer2.equals("2"));
 							if ( answer2.equals("1") )
 							{
 								orderflag = true;
@@ -226,7 +151,7 @@ public class main
 			}
 			else if (answer.equals("3"))
 			{
-				System.out.println(sales);
+				System.out.println(sales + "\n");
 			}
 			else
 			{
@@ -235,13 +160,12 @@ public class main
 		}
 	}
     
-	public static Products method(Class c)            //  Dinei sto xristi tin 
+	public static Products method(Class c)            //  Epistrefei to antikeimeno pou tha agorastei
 	{
 		Products j = null;
 		int x;
 		String answer3;
 		boolean flag;
-		
 		
 		System.out.println("Please type the name of the device you're interested: ");                                      
 		for( Products i : products )
@@ -257,7 +181,7 @@ public class main
 		{
 			for ( Products i : products )
 			{
-				if ( i.getName().equals(answer3) )
+				if ( i.getName().equalsIgnoreCase(answer3) )
 				{
 					System.out.println(i);
 					flag = true;
@@ -282,37 +206,14 @@ public class main
 	}	
 	
 	
-	public static int Number(Products i)        // Enimerwnei ta diathesima proionta, Kathorizei an o xristis tha agorasei,tha paraggeilei i an tha epistrepsei sto arxiko menu
+	public static int Number(Products i)        // Enimerwnei ta diathesima proionta, Kathorizei an o xristis tha agorasei,tha paraggeilei i an tha epistrepsei sto arxiko menu!
 	{
-		
+		int temp = 0;
+		temp = Position(i);
 		int available=0;
 		int x = 0;
 		String answer3;
-			
-		if ( i instanceof TV )
-		{
-			available = availability.get(0);
-		}
-		else if ( i instanceof BRDVD )
-		{
-			available = availability.get(1);
-		}
-		else if ( i instanceof Camera )
-		{
-			available = availability.get(2);
-		}
-		else if ( i instanceof Gaming )
-		{
-			available = availability.get(3);
-		}
-		else if ( i instanceof Friges )
-		{
-			available = availability.get(4);
-		}
-		else if ( i instanceof Washingmachine )
-		{
-			available = availability.get(5);
-		}
+		available = availability.get(temp);
 		
 		if ( available != 0 )
 		{
@@ -328,30 +229,7 @@ public class main
 			
 			if ( answer3.equals("1") )
 			{
-				if ( i instanceof TV )
-				{
-					availability.set(0,available-1);
-				}
-				else if ( i instanceof BRDVD )
-				{
-					availability.set(1,available-1);
-				}
-				else if ( i instanceof Camera )
-				{
-					availability.set(2,available-1);
-				}
-				else if ( i instanceof Gaming )
-				{
-					availability.set(3,available-1);
-				}
-				else if ( i instanceof Friges )
-				{
-					availability.set(4,available-1);
-				}
-				else if ( i instanceof Washingmachine )
-				{
-					availability.set(5,available-1);
-				}
+				availability.set(temp,available-1);
 				x = available;
 			}
 			else if ( answer3.equals("2") )
@@ -380,11 +258,39 @@ public class main
 		return x;
 	}
 	
+	public static int Position(Products i)   // Kathorizei tin thesi tou antikeimenou sto Arraylist 
+	{	
+		int a = 0;
+		if ( i instanceof TV )
+		{
+			a=0;
+		}
+		else if ( i instanceof BRDVD )
+		{
+			a=1;
+		}
+		else if ( i instanceof Camera )
+		{
+			a=2;
+		}
+		else if ( i instanceof Gaming )
+		{
+			a=3;
+		}
+		else if ( i instanceof Friges )
+		{
+			a=4;
+		}
+		else if ( i instanceof Washingmachine )
+		{
+			a=5;
+		}
+		return a;
+	}
 	
-	public static void createSales(int code,Products i)
+	public static void createSales(int code,Products i)   // Create sales item
 	{
 		double total;
-		//Scanner in = new Scanner(System.in);
 		String scode,product,name,phone,date,totalcost;
 		scode = "" + code;
 		product = i.getName();
@@ -401,10 +307,9 @@ public class main
 		
 	}
 	
-	public static void createOrder(int code,Products i)
+	public static void createOrder(int code,Products i)   // Create order item
 	{
 		double total;
-		//Scanner in = new Scanner(System.in);
 		String ocode,product,name,phone,orderdate,arrivaldate,answer,totalcost;
 		boolean flag;
 		ocode = "" + code;
@@ -419,24 +324,37 @@ public class main
 		arrivaldate = in.nextLine();
 		total = i.getPrice() - (i.getPrice()*i.getDiscount());
 		totalcost = "" + total;
-		/*System.out.println("Has the order arrived at it's destination?\n1.Yes\n2.No");
-		answer = in.nextLine();
-		while (!answer.equals("1") && !answer.equals("2"));
-		{
-			System.out.println("Wrong input!");
-			System.out.println("Has the order arrived at it's destination?\n1.Yes\n2.No");
-			answer = in.nextLine();
-		}
-		if ( answer.equals("1") )
-		{
-			flag = true;
-		}
-		else
-		{
-			flag = false;
-		}*/
 		flag = false;
 		orders.add(new Order(ocode,product,name,phone,orderdate,arrivaldate,totalcost,flag));
 		System.out.println("Your order is done!");
+	}
+	
+	public static void Select (int j, Products i)   // Kathorizei an o xristis tha paraggeilei,tha agorasei i den tha kanei tipota
+	{
+		if( j > 0 )
+		{
+			productsSaleCode++;
+			createSales(productsSaleCode,i);
+		}
+		else if ( j == 0 )
+		{
+			productsOrderCode++;
+			createOrder(productsOrderCode,i);						
+		}
+		else if ( j == -1 )
+		{
+			System.out.println("Redirecting you back to starting menu");
+		}
+	}
+	
+	
+	public static void printStartMenu()
+	{
+		System.out.println();
+		System.out.println("1. Available Devices");
+		System.out.println("2. All Orders");
+		System.out.println("3. All Sales");
+		System.out.println("0. Exit");
+		System.out.println();
 	}
 }
