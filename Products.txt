@@ -1,0 +1,91 @@
+Itemlist
+{
+	Item
+	{
+		Code ABF010
+		Item_type tv
+		Model UE40JU6000
+		Year 2015
+		Manufacturer Samsung
+		Price 500
+		Panel_type LED
+		Dimensions 40
+		Resolution Ultra HD 4k
+		Port HDMI Component Composite USB Ethernet Wifi
+	}
+	Item
+	{
+		Code CDA015
+		Item_type refrigerator
+		Model KVT29VW30
+		Year 2015
+		Manufacturer Pitsos
+		Price 400
+	}
+	Item
+	{
+		Code BR0997
+		Model KBFAAHGUAS
+		Year 2003
+		Manufacturer Sony
+		Price 79.99
+		Type DVD
+		Resolution 3D HD 4K
+		Format HDMI Component Composite
+		Item_type brdvd
+		Resolution HD
+	}
+	Item
+	{
+		Code AFF123
+		Model  WAHOGA1578
+		Item_type camera
+		Manufacturer Nikon
+		Price 119.99
+		type DSLR
+		megapixel 20
+		opticalzoom x200
+		digitalzoom x300
+		screensize 8
+	}
+	
+	Item
+	{
+		Code DFGH68768
+		Model  guyh76658hbbb
+		Item_type camera
+		Manufacturer canon
+		Price 100000000
+		type DSLR
+		megapixel 40
+		opticalzoom x354
+		digitalzoom x7676
+		screensize 9
+	}
+	
+	Item
+	{
+		Code SAE5179
+		Model Aggawe268
+		Item_type gaming
+		Manufacturer Sony
+		Price 199.99
+		Console_type PS4
+		Proccessor AMD
+		Graphics Nvidia
+		Sound Realtek
+		Capacity 500GB
+	}
+	Item
+	{
+		Code UHAFAF682
+		Model RedDragon
+		Item_type Washingmachine
+		Manufacturer AEG
+		Price 249.99
+		EnergySave 148W
+		Washing_space 400
+		Bends 350
+	}
+}
+	

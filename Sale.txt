@@ -1,0 +1,39 @@
+Saleslist
+{
+	Sale
+	{
+		Item_type tv
+		Sales_number 1
+		Name Giorgos Kalos
+		Phone 19576791
+		Sale_date 25 June 2016
+		Price 450
+	}
+	Sale
+	{
+		Item_type Gaming
+		Sales_number 2
+		Name Giorgos Kakos
+		Phone 172511952
+		Sale_date 26 June 2016
+		Price 350
+	}
+	Sale
+	{
+		Item_type TV
+		Sales_number 3
+		Name Giorgos Metrios
+		Phone 19588251
+		Sale_date 3 June 2016
+		Price 375.0
+	}
+	Sale
+	{
+		Item_type TV
+		Sales_number 4
+		Name Giorgos kseminame
+		Phone 197575921
+		Sale_date 3 August 2015
+		Price 375.0
+	}
+	

@@ -1,0 +1,37 @@
+Orderlist
+{
+	Order
+	{
+     		Item_type  tv
+		Order_number 1
+		Name Giorgos Kalos
+		Phone 19576791
+		Order_date 23 May 2016
+		Delivery_date 25 June 2016
+		Price 450
+		Status Delivered
+	}
+	Order
+	{
+		Item_type  Gaming
+		Order_number 2
+		Name Giorgos Kakos
+		Phone 172511952
+		Order_date 24 May 2016
+		Delivery_date 26 June 2016
+		Price 350
+		Status Expected
+	}
+	
+	Order
+	{
+		Item_type TV
+		Order_number 3
+		Name Giorgos Allos
+		Phone 1255178952791
+		Order_date 4 August 2015
+		Delivery_date 10 August 2015
+		Price 375.0
+		Status Expected
+	}
+	
